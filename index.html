@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On-Off</title>
+    <style>
+        
+        body{
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #dbdbdb;
+        }
+        input[type="checkbox"]{
+            width: 200px;
+            height: 100px;
+            cursor: pointer;
+            background-color: gray;
+            border-radius: 50px;
+            appearance: none;
+            box-shadow: inset 0px 0px 15px 1px rgba(0, 0, 0, 0.30);
+            transition:  0.5s;
+            position: relative;
+        }
+        input:checked[type="checkbox"]{
+            background-color: rgba(122, 255, 162, 0.829);
+        }
+        input[type="checkbox"]::before{
+            content: '';
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.30);
+            transform: scale(1.1);
+            top: 0;
+            left: 0;
+            transition: 0.5s;
+        }
+        input:checked[type="checkbox"]::before{
+            left: 100px;
+            
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" >
+</body>
+</html>
